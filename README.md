@@ -1,6 +1,8 @@
-# [Slickplan](https://slickplan.com) Provider for OAuth 2.0 Client
+# Slickplan Provider for OAuth 2.0 Client
 
-This package provides Slickplan OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+This package provides [Slickplan](https://slickplan.com) OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+
+Slickplan API documentation: [slickplan/api-docs](https://github.com/slickplan/api-docs)
 
 ## Installation
 
@@ -12,9 +14,7 @@ composer require slickplan/oauth2-slickplan-php
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\Slickplan\OAuth2\Client\Provider\Slickplan` as the provider.
-
-Please see [thephpleague/oauth2-client](https://oauth2-client.thephpleague.com/usage/) for instruction.
+Please refer to [League's Oauth Client documentation](https://oauth2-client.thephpleague.com/usage/).
 
 Example code:
 
@@ -28,7 +28,8 @@ $provider = new SlickplanProvider([
 ]);
 
 if (isset($_GET['error'])) {
-    exit('Error: ' . $_GET['error'] . (isset($_GET['error_description']) ? ' (' . $_GET['error_description'] . ')' : ''));
+    print_r($_GET);
+    exit;
 } elseif (!isset($_GET['code'])) {
     header('Location: ' . $provider->getAuthorizationUrl(['scope' => 'all_read']));
     exit;
