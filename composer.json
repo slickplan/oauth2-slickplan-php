@@ -1,0 +1,29 @@
+{
+  "name": "slickplan/oauth2-slickplan-php",
+  "description": "Slickplan.com OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Slickplan Team",
+      "email": "help@slickplan.com",
+      "homepage": "https://slickplan.com/"
+    }
+  ],
+  "keywords": [
+    "oauth",
+    "oauth2",
+    "client",
+    "authorization",
+    "authentication",
+    "slickplan"
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "league/oauth2-client": "^2.6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Slickplan\\OAuth2\\Client\\": "src/"
+    }
+  }
+}
